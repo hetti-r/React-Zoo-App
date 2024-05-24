@@ -7,14 +7,14 @@ export const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
 
     <div className="card">
       <div className="imgContainer">
-        <img className="animalPic" img src={`https://source.unsplash.com/400x400/?${name}`} />
+        <img className="animalPic" img src={`https://source.unsplash.com/210x210/?${name}`} />
 
         <button onClick={removeCard} className="delete"><span className="material-symbols-outlined">
           close
         </span></button>
       </div>
 
-      <h2>{name}</h2>
+      <h3>{name}</h3>
       <Link to={name}>See more</Link>
       <div className="lowrow">
         <button onClick={removeLikes} className="minusHeart"><span className="material-symbols-outlined">

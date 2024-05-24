@@ -1,6 +1,6 @@
 const ErrorPage = () => {
     return (
-        <h1>There's an error.</h1>
+        <div className="error"><h1>There's an Error.</h1></div>
     );
 }
 

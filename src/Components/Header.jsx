@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+
     return (
-        <header>
+        <header id="header">
             <Link to="/">
                 <h1>Zoo</h1>
             </Link>
@@ -12,6 +13,7 @@ const Header = () => {
             <NavLink className="nav" to="/birds">Birds</NavLink>
             <NavLink className="nav" to="/insects">Insects</NavLink>
             <NavLink className="nav" to="/fishes">Fish</NavLink>
+            <NavLink className="nav" to="/about">About</NavLink>
 
         </header>)
 }
