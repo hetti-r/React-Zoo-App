@@ -7,7 +7,7 @@ export const Card = ({ name, likes, addLikes, removeCard, removeLikes }) => {
 
     <div className="card">
       <div className="imgContainer">
-        <img className="animalPic" img src={`https://source.unsplash.com/210x210/?${name}`} />
+        <img className="animalPic" src={`https://source.unsplash.com/210x210/?${name}`} />
 
         <button onClick={removeCard} className="delete"><span className="material-symbols-outlined">
           close

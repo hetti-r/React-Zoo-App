@@ -8,7 +8,6 @@ import Root from './routes/Root'
 import ErrorPage from './routes/ErrroPage'
 import About from './routes/About'
 import SinglePage from './routes/SinglePage';
-import { useLocation, useParams } from "react-router-dom";
 
 function App() {
 

@@ -7,6 +7,8 @@
 #root {
   text-align: center;
   width: 100%;
+  top: 0;
+  position: absolute;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
   
 }
 
@@ -77,8 +80,6 @@ text-decoration: underline;
   grid-gap: 12px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding: 2rem;
-
-  
 }
 
 h1 {
@@ -93,7 +94,6 @@ h1 {
   margin: 0;
   padding-bottom: 2rem;
   font-size: 8rem;
-
 }
 
 h2 {
@@ -114,10 +114,10 @@ header {
   padding: 2rem;
   margin-bottom: 5px;
 }
+
 .error {
   background-color: #888;
 }
-
 
 .card {
   background-color: rgb(230, 225, 216);
@@ -187,7 +187,6 @@ input {
   border-radius: 5px;
 }
 
-
 .imgContainer .delete :hover {
   color: #de7f7f;
   
@@ -207,7 +206,6 @@ input {
   bottom:4px; 
 }
 
-
 .read-the-docs {
   color: #888;
 }
@@ -222,10 +220,8 @@ width: 100vw;
 .homeImg {
   object-fit: cover;
   height: 50vh;
-  width: fit-content;
-  max-width: 50vw;
+  width: 50vw;
 }
-
 
 .homelink1 {
   position: absolute;
@@ -291,12 +287,13 @@ width: 100vw;
   width: 50%;
   padding: 2rem;
   margin-top: 2rem;
+  height: fit-content;
 }
 
 .singlePage img {
 border-radius: 10px;
+width: 90%;
 }
-
 
 a {
   font-weight: 500;
