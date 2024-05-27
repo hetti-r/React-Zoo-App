@@ -8,8 +8,29 @@ import Root from './routes/Root'
 import ErrorPage from './routes/ErrroPage'
 import About from './routes/About'
 import SinglePage from './routes/SinglePage';
+import { useParams } from 'react-router-dom';
+import Header from './Components/Header';
 
 function App() {
+  const { category } = useParams();
+  let bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+
+  switch (category) {
+    case 'animals':
+      bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+      break;
+    case 'birds':
+      bgImageUrl = 'https://source.unsplash.com/1200x1200/?sky';
+      break;
+    case 'fishes':
+      bgImageUrl = 'https://source.unsplash.com/1200x1200/?sea';
+      break;
+    case 'insects':
+      bgImageUrl = 'https://source.unsplash.com/1200x1200/?ground';
+      break;
+    default:
+      bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+  }
 
   const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
 
@@ -30,7 +51,7 @@ function App() {
     { path: '/', element: <Home /> },
     {
       path: '/',
-      element: <Root />,
+      element: <Root bgImageUrl={bgImageUrl} />,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -43,6 +64,7 @@ function App() {
           />
         },
         { path: ':category/:name', element: <SinglePage {...zoo} /> },
+        { path: ':category', element: <Header bgImageUrl={bgImageUrl} /> },
         { path: '/about', element: <About /> }
       ],
     },

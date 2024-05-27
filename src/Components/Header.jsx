@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ bgImageUrl }) => {
 
     return (
-        <header>
+        <header style={{ backgroundImage: `url(${bgImageUrl})` }}>
             <Link to="/">
                 <h1>Zoo</h1>
             </Link>

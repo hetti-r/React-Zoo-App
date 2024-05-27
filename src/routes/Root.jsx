@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
-const Root = () => {
+const Root = ({ bgImageUrl }) => {
     return (
         <>
-            <Header />
+            <Header bgImageUrl={bgImageUrl} />
             <main>
                 <Outlet></Outlet>
             </main>
