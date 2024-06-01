@@ -2,10 +2,31 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-const Header = ({ bgImageUrl }) => {
+const Header = () => {
+
+    const { category } = useParams();
+    let bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+
+    switch (category) {
+        case 'animals':
+            bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+            break;
+        case 'birds':
+            bgImageUrl = 'https://source.unsplash.com/1200x1200/?sky';
+            break;
+        case 'fishes':
+            bgImageUrl = 'https://source.unsplash.com/1200x1200/?underwater';
+            break;
+        case 'insects':
+            bgImageUrl = 'https://source.unsplash.com/1200x1200/?soil';
+            break;
+        default:
+            bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+    }
+
 
     return (
-        <header style={{ backgroundImage: `url(${bgImageUrl})` }}>
+        <header style={{ backgroundImage: `linear-gradient(to bottom, rgba(155, 185, 175, 0.555), rgba(71, 83, 80, 0.643)), url(${bgImageUrl})` }}>
             <Link to="/">
                 <h1>Zoo</h1>
             </Link>

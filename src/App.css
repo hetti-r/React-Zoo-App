@@ -127,6 +127,11 @@ header {
   overflow: hidden;
 }
 
+.text {
+  margin: 2rem;
+  text-align: start;
+}
+
 .animalPic {
   width: 210px;
   border-radius: 10px;
