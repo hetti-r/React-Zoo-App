@@ -5,23 +5,23 @@ import { useParams } from "react-router-dom";
 const Header = () => {
 
     const { category } = useParams();
-    let bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+    let bgImageUrl = 'https://source.unsplash.com/1920x1920/?forest';
 
     switch (category) {
         case 'animals':
-            bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+            bgImageUrl = 'https://source.unsplash.com/1920x1920/?forest';
             break;
         case 'birds':
-            bgImageUrl = 'https://source.unsplash.com/1200x1200/?sky';
+            bgImageUrl = 'https://source.unsplash.com/1920x1920/?sky';
             break;
         case 'fishes':
-            bgImageUrl = 'https://source.unsplash.com/1200x1200/?underwater';
+            bgImageUrl = 'https://source.unsplash.com/1920x1920/?underwater';
             break;
         case 'insects':
-            bgImageUrl = 'https://source.unsplash.com/1200x1200/?soil';
+            bgImageUrl = 'https://source.unsplash.com/1920x1920/?soil';
             break;
         default:
-            bgImageUrl = 'https://source.unsplash.com/1200x1200/?forest';
+            bgImageUrl = 'https://source.unsplash.com/1920x1920/?forest';
     }
 
 
